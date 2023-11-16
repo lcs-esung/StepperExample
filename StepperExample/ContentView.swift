@@ -9,19 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
 @State var base: Int = 1
-    
+
     var squared: Int {
         return base * base
     }
     
     var body: some View {
+    
         VStack {
-                  
                   Spacer()
                   
                   HStack(alignment: .top) {
 
-                      Text("\(base)")
+                      Text("(\(base))")
                           .font(.system(size: 96))
 
                       Text("2")
@@ -33,8 +33,9 @@ struct ContentView: View {
                       Text("\(squared)")
                           .font(.system(size: 96))
                   }
-                    
-            Stepper(value: $base, label: {
+
+            
+                    Stepper(value: $base, label: {
                 Text("Base")
             })
             
